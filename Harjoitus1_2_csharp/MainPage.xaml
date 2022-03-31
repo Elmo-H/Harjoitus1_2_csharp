@@ -8,7 +8,38 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <RelativePanel>
+        <TextBlock Name="headerText"
+                   FontSize="50"
+                   Margin="20, 0, 5,  40">Tervetuloa sovelluksen käyttäjäksi!
+        </TextBlock>
+        
+        <TextBlock Name="paragraph"
+                   FontSize="20"
+                   RelativePanel.AlignBottomWith="headerText"
+                   RelativePanel.LeftOf="mainPicture"
+                   Margin="20,0,0,0">Tämä sovellus on toteutettu "Ohjelmointityökalut" -opintojakson harjoitustehtävänä.
+        </TextBlock>
+        
+        <Image Name="mainPicture"
+               RelativePanel.RightOf="headerText"
+               RelativePanel.AlignRightWithPanel="true"
+               Source="Assets/bloodborne.png"
+               Margin="0, 20, 0, 0"
+               Width="600"
+               />
+        <CheckBox Name="checkbox1"
+                  FontSize="20"
+                  RelativePanel.Below   ="paragraph"
+                  Margin="35,50,0,0">Hyväksyn käyttöehdot
+        </CheckBox>
 
-    </Grid>
+        <Button
+            Margin="35, 50, 0, 0"
+            RelativePanel.Below="checkbox1"
+            FontSize="20"
+            >OK
+        </Button>
+
+    </RelativePanel>
 </Page>
